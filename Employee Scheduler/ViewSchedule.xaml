@@ -1,0 +1,23 @@
+﻿<Window x:Class="Employee_Scheduler.ViewSchedule"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Employee_Scheduler"
+        mc:Ignorable="d"
+        Title="ViewSchedule" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />            
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Button Name="WeekCreateButton" Width="150" Height="40" Margin="-552,20,0,0" Content="Create Weekly Schedule" Grid.Row="0" Click="WeekCreateButton_Click"/>
+        <Button Name="MonthCreateButton" Width="150" Height="40" Margin="-200,20,0,0" Content="View Schedule" Grid.Row="0" Click="ViewButton_Click"/>
+        <Button Name="DeleteCurrent" Width="150" Height="40" Margin="150,20,0,0" Content="Delete Current Schedule" Grid.Row="0" Click="DeleteCurrent_Click"/>
+        <Label Content="Search: " Grid.Row="0" HorizontalAlignment="Right" Margin="0,24,170,0"/>
+        <TextBox x:Name="SchedSearchBox" Width="150" Margin="0,30,21,10" Grid.Row="0" HorizontalAlignment="Right" TextChanged="SchedSearchBox_TextChanged"/>
+        <DataGrid Grid.Row="1" Margin="10" Width="700" Height="300" x:Name="ScheduleList" AutoGeneratingColumn="ScheduleList_AutoGeneratingColumn"/>
+
+    </Grid>
+</Window>

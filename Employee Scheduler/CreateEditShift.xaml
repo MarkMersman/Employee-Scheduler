@@ -1,0 +1,29 @@
+﻿<Window x:Class="Employee_Scheduler.CreateEditShift"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:local="clr-namespace:Employee_Scheduler"
+        mc:Ignorable="d"
+        Title="Create/Edit Shift" Height="450" Width="450">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />            
+        </Grid.RowDefinitions>
+        <Label Content="Shift Name: " Grid.Row="0" Margin="100,50,0,0"/>
+        <Label Content="Start Time: " Grid.Row="1" Margin="100,50,0,0"/>
+        <Label Content="End Time: " Grid.Row="2" Margin="100,50,0,0"/>
+        <TextBox x:Name="ShiftNameTextBox" Margin="200,50,0,0" Grid.Row="0" Width="200" />
+        <xctk:TimePicker x:Name="StartTimePicker" Margin="200,50,0,0" Grid.Row="1" Width="200"/>
+        <xctk:TimePicker x:Name="EndTimePicker" Margin="200,50,0,0" Grid.Row="2" Width="200"/>
+
+        <Button Height="50" Width="100" Content="Submit" Grid.Row="3" Click="Button_Click"/>
+
+
+    </Grid>
+</Window>
